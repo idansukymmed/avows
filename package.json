@@ -1,0 +1,48 @@
+{
+  "name": "avows",
+  "version": "1.0.0",
+  "description": "dashboardTest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm run start --prefix client",
+    "admin-css": "node-sass client/src/admin/adminresources/admin.scss client/src/admin/adminresources/admin.css --watch",
+    "front-css": "node-sass client/src/website/resources/styles.scss client/src/website/resources/styles.css --watch",
+    "dev": "concurrently npm:server npm:client npm:admin-css npm:front-css"
+  },
+  "engines": {
+    "node": "14.15.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idansukymmed/avows.git"
+  },
+  "keywords": [
+    "dashboard",
+    "test"
+  ],
+  "author": "demmy kusnadi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/idansukymmed/avows/issues"
+  },
+  "homepage": "https://github.com/idansukymmed/avows#readme",
+  "dependencies": {
+    "@vonage/server-sdk": "^2.10.10",
+    "async": "^3.2.1",
+    "axios": "^0.21.4",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^6.2.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0",
+    "http-proxy-middleware": "^2.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.7",
+    "nexmo": "^2.9.1",
+    "node-sass": "^6.0.1"
+  }
+}
