@@ -9,8 +9,7 @@
     "server": "nodemon server.js",
     "client": "npm run start --prefix client",
     "admin-css": "node-sass client/src/admin/adminresources/admin.scss client/src/admin/adminresources/admin.css --watch",
-    "front-css": "node-sass client/src/website/resources/styles.scss client/src/website/resources/styles.css --watch",
-    "dev": "concurrently npm:server npm:client npm:admin-css npm:front-css"
+    "dev": "concurrently npm:server npm:client npm:admin-css"
   },
   "engines": {
     "node": "14.15.4"
@@ -36,6 +35,7 @@
     "bcryptjs": "^2.4.3",
     "concurrently": "^6.2.1",
     "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-formidable": "^1.2.0",
